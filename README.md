@@ -32,8 +32,8 @@ A starter kit for writing professional d365 JS webresources
 
 **References**
 - [The Modern JavaScript Tutorial](https://javascript.info/)
-- [jsdocs](https://devdocs.io/jsdoc/)
-- [jest](https://jestjs.io/docs/en/getting-started)
+- [JSDocs](https://devdocs.io/jsdoc/)
+- [Jest](https://jestjs.io/docs/en/getting-started)
 
 **Code Recommendations**
 1. Code your tasks as independent functions with parameters. This way you can unit test your functions and easily use them in other forms without being tied to a specific entity.
