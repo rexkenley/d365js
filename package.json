@@ -1,0 +1,59 @@
+{
+  "name": "d365js",
+  "version": "1.0.0",
+  "description": "A starter kit for writing professional d365 JS webresources",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --ext .jsx,.js src/",
+    "test": "npx jest --verbose ./test",
+    "doc": "jsdoc -c jsdoc.json",
+    "//Form": "****************** -- source.js --o destination.js",
+    "build:form:dev": "%npm_package_scripts_buildDevForm%",
+    "build:form:prd": "%npm_package_scripts_buildPrdForm%",
+    "//Chunk": "****************** -- source.js --o destination.js",
+    "build:chunk:dev": "%npm_package_scripts_buildDevChunk%",
+    "build:chunk:prd": "%npm_package_scripts_buildPrdChunk%",
+    "//NPM": "*****************************************************************",
+    "buildDev": "npx lint src && npx webpack --config webpack/config.dev.js",
+    "buildDevChunk": "npx lint src && npx webpack --config webpack/config.dev.chunk.js",
+    "buildDevForm": "npx lint src && npx webpack --config webpack/config.dev.form.js",
+    "buildPrd": "npx webpack --config webpack/config.prd.js",
+    "buildPrdChunk": "npx webpack --config webpack/config.prd.chunk.js",
+    "buildPrdForm": "npx webpack --config webpack/config.prd.form.js"
+  },
+  "keywords": [
+    "d365",
+    "javascript",
+    "webresources",
+    "d365",
+    "webresource"
+  ],
+  "author": "Rex Kenley Tan",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/runtime-corejs3": "^7.7.7",
+    "@types/jest": "^24.0.25",
+    "core-js": "^3.6.2",
+    "react": "^16.12.0",
+    "webpack": "^4.41.5",
+    "webpack-bundle-analyzer": "^3.6.0",
+    "webpack-merge": "^4.2.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-transform-runtime": "^7.7.6",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-react": "^7.7.4",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-require-context-hook": "^1.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "jest": "^24.9.0",
+    "jsdoc": "^3.6.3",
+    "prettier": "1.19.1",
+    "webpack-cli": "^3.3.10"
+  }
+}
