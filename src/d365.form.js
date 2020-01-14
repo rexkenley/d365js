@@ -17,6 +17,7 @@ const values = {
  * An function that contains the form type values.
  *
  * e.g. FormTypes(1) => Create, FormTypes.Create => 1
+ *
  * {@link https://docs.microsoft.com/en-us/powerapps/developer/model-driven-apps/clientapi/reference/formcontext-ui/getformtype}
  * @function FormTypes
  * @param {number} value - the numerical value of form type
@@ -35,6 +36,7 @@ export { FormTypes };
 
 /**
  * A function that will set the status of controls based on an attribute list.
+ *
  * e.g. setDisabled(formContext, true, "name", "telephone1", "websiteurl") => Account form Account Name, Phone, Website will be disabled.
  *
  * {@link https://docs.microsoft.com/en-us/powerapps/developer/model-driven-apps/clientapi/reference/controls/setdisabled}
