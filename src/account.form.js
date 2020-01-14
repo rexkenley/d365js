@@ -1,10 +1,10 @@
 /**
- * @module account.form
+ * @module "account.form.js"
  */
 
 /**
  * Account Form On Load
- * https://docs.microsoft.com/en-us/powerapps/developer/model-driven-apps/clientapi/clientapi-form-context
+ * {@link https://docs.microsoft.com/en-us/powerapps/developer/model-driven-apps/clientapi/clientapi-form-context}
  * @param {{}} executionContext
  */
 export function formOnLoad(executionContext) {
