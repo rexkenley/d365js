@@ -18,11 +18,15 @@ import {
  * @return void
  */
 export function formOnLoad(executionContext) {
-  const formContext = executionContext.getFormContext(),
-    formType = formContext.ui.getFormType();
+  try {
+    const formContext = executionContext.getFormContext(),
+      formType = formContext.ui.getFormType();
 
-  FormTypes(formType);
-  setVisible(formContext, false, "telephone2", "telephone3");
-  setDisabled(formContext, true, "telephone1");
-  setDisplayState(formContext, true, "tabs1", "tabs2", "tabs3");
+    FormTypes(formType);
+    setVisible(formContext, false, "telephone2", "telephone3");
+    setDisabled(formContext, true, "telephone1");
+    setDisplayState(formContext, true, "tabs1", "tabs2", "tabs3");
+  } catch (ex) {
+    console && console.error(ex.message || ex);
+  }
 }
