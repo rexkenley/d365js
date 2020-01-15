@@ -1,3 +1,10 @@
+import {
+  FormTypes,
+  setVisible,
+  setDisabled,
+  setDisplayState
+} from "./d365.form";
+
 /**
  * @module "account.form.js"
  */
@@ -13,4 +20,9 @@
 export function formOnLoad(executionContext) {
   const formContext = executionContext.getFormContext(),
     formType = formContext.ui.getFormType();
+
+  FormTypes(formType);
+  setVisible(formContext, false, "telephone2", "telephone3");
+  setDisabled(formContext, true, "telephone1");
+  setDisplayState(formContext, true, "tabs1", "tabs2", "tabs3");
 }
