@@ -29,7 +29,9 @@ A starter kit for writing professional d365 JS webresources
   - npm i lodash
 - [validatorjs](https://github.com/validatorjs/validator.js) - A library of string validators and sanitizers.
   - npm i validator
-
+- [xTypejs](https://github.com/lucono/xtypejs) - Elegant, highly efficient data validation for JavaScript
+  - npm i xtypejs
+  
 **References**
 - [The Modern JavaScript Tutorial](https://javascript.info/)
 - [JSDocs](https://devdocs.io/jsdoc/)
