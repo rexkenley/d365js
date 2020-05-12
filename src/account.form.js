@@ -2,7 +2,7 @@ import {
   FormTypes,
   setVisible,
   setDisabled,
-  setDisplayState
+  // setDisplayState,
 } from "./d365.form";
 
 /**
@@ -10,7 +10,7 @@ import {
  */
 
 /**
- * Account Form On Load&
+ * Account Form On Load
  *
  * {@link https://docs.microsoft.com/en-us/powerapps/developer/model-driven-apps/clientapi/clientapi-form-context}
  * @function formOnLoad
@@ -22,10 +22,10 @@ export function formOnLoad(executionContext) {
     const formContext = executionContext.getFormContext(),
       formType = formContext.ui.getFormType();
 
-    FormTypes(formType);
+    console.log(FormTypes(formType));
     setVisible(formContext, false, "telephone2", "telephone3");
     setDisabled(formContext, true, "telephone1");
-    setDisplayState(formContext, true, "tabs1", "tabs2", "tabs3");
+    // setDisplayState(formContext, true, "tabs1", "tabs2", "tabs3");
   } catch (ex) {
     console && console.error(ex.message || ex);
   }

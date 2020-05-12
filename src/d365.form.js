@@ -1,7 +1,7 @@
 /** @module "d365.form.js" */
 
 function fr(value) {
-  return Object.keys(this).find(k => this[k] === value);
+  return Object.keys(this).find((k) => this[k] === value);
 }
 
 /** @type {{}} */
@@ -11,7 +11,7 @@ const ftValues = {
     Update: 2,
     "Read Only": 3,
     Disabled: 4,
-    "Bulk Edit": 6
+    "Bulk Edit": 6,
   },
   /** @type {{}} */
   smValues = {
@@ -25,7 +25,7 @@ const ftValues = {
     Assign: 47,
     "Save as Completed": 58,
     "Save and New": 59,
-    "Auto Save": 70
+    "Auto Save": 70,
   };
 
 /**
@@ -92,12 +92,13 @@ export { FormTypes, SaveMode };
  */
 export function setDisabled(formContext, value, ...attributes) {
   try {
-    attributes.forEach(a => {
+    attributes.forEach((a) => {
       const current = formContext.getControl(a);
 
       if (
+        current &&
         ["standard", "iframe"].some(
-          type => type === current.getControlType()
+          (type) => type === current.getControlType()
         ) &&
         current.getDisabled() !== value
       )
@@ -122,7 +123,7 @@ export function setDisabled(formContext, value, ...attributes) {
  */
 export function setVisible(formContext, value, ...attributes) {
   try {
-    attributes.forEach(a => {
+    attributes.forEach((a) => {
       let current = formContext.ui.tabs.get(a); // tab
 
       if (current && current.getVisible() !== value) {
@@ -133,8 +134,9 @@ export function setVisible(formContext, value, ...attributes) {
       current = formContext.getControl(a); // attributes or iframes
 
       if (
+        current &&
         ["standard", "iframe"].some(
-          type => type === current.getControlType()
+          (type) => type === current.getControlType()
         ) &&
         current.getVisible() !== value
       )
@@ -159,10 +161,10 @@ export function setVisible(formContext, value, ...attributes) {
  */
 export function setDisplayState(formContext, expanded, ...tabs) {
   try {
-    tabs.forEach(t => {
+    tabs.forEach((t) => {
       const current = formContext.ui.tabs.get(t); // tab
 
-      if (current) current.setDisplayState(expanded ? "expanded" : "collapsed");
+      current && current.setDisplayState(expanded ? "expanded" : "collapsed");
     });
   } catch (ex) {
     console && console.error(ex.message || ex);
@@ -185,9 +187,9 @@ export function setSubmitMode(formContext, mode, ...attributes) {
   try {
     const modes = ["always", "never", "dirty"];
 
-    if (modes.every(m => m !== mode)) return;
+    if (modes.every((m) => m !== mode)) return;
 
-    attributes.forEach(a => {
+    attributes.forEach((a) => {
       const attribute = formContext.getAttribute(a);
       attribute && attribute.setSubmitMode(mode);
     });
@@ -212,9 +214,9 @@ export function setRequiredLevel(formContext, requirementLevel, ...attributes) {
   try {
     const requirementLevels = ["none", "required", "recommended"];
 
-    if (requirementLevels.every(rl => rl !== requirementLevel)) return;
+    if (requirementLevels.every((rl) => rl !== requirementLevel)) return;
 
-    attributes.forEach(a => {
+    attributes.forEach((a) => {
       const attribute = formContext.getAttribute(a);
       attribute && attribute.setRequiredLevel(requirementLevel);
     });

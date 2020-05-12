@@ -15,7 +15,7 @@
     "sourceType": "module"
   },
   "rules": {
-    "prettier/prettier": ["error"],
+    "prettier/prettier": ["warn"],
     "one-var": ["error", "consecutive"],
     "import/prefer-default-export": "off",
     "no-unused-expressions": "off"
