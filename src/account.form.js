@@ -1,7 +1,7 @@
 import {
   FormTypes,
   setVisible,
-  setDisabled,
+  setDisabled
   // setDisplayState,
 } from "./d365.form";
 

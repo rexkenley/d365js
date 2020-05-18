@@ -1,6 +1,6 @@
 const webpack = require("webpack"),
   merge = require("webpack-merge"),
-  dev = require("./config.dev.js");
+  dev = require("./config.dev.form.js");
 
 module.exports = merge(dev, {
   plugins: [new webpack.HashedModuleIdsPlugin()],
