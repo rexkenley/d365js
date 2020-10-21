@@ -37,6 +37,7 @@
     "core-js": "^3.6.2",
     "react": "^16.14.0",
     "snyk": "^1.419.1",
+    "taiko": "^1.0.25",
     "webpack": "^4.44.2",
     "webpack-bundle-analyzer": "^3.9.0",
     "webpack-merge": "^4.2.2"
