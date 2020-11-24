@@ -36,7 +36,7 @@
     "@types/jest": "^24.0.25",
     "core-js": "^3.6.2",
     "react": "^16.14.0",
-    "snyk": "^1.419.1",
+    "snyk": "^1.425.4",
     "taiko": "^1.0.25",
     "webpack": "^4.44.2",
     "webpack-bundle-analyzer": "^3.9.0",
