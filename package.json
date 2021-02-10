@@ -39,7 +39,7 @@
     "snyk": "^1.433.0",
     "taiko": "^1.0.28",
     "webpack": "^4.44.2",
-    "webpack-bundle-analyzer": "^3.9.0",
+    "webpack-bundle-analyzer": "^4.0.0",
     "webpack-merge": "^4.2.2"
   },
   "devDependencies": {
